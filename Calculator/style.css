@@ -1,0 +1,76 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#f0eefd,rgb(190, 135, 135));
+    text-align: center; 
+    align-items: center;
+}
+
+.outer{
+    display: grid;
+    max-width: 300px;
+    min-height: 450px;
+    align-content: center;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem .6rem;
+    background:linear-gradient(#B4869F,#22203a);
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    color: rgb(79, 72, 72);
+
+}
+.equalto{
+    grid-column: span 2;
+}
+.btn , .output{
+    font-size: 1.2rem;
+    padding: 0.8rem 0.2rem;
+    border-radius: 1.2rem;
+    box-shadow: inset 4px 4px rgba(200, 235, 223, 0.733);
+    background-color: #A6B1E1;
+    border: none;
+}
+.outer .output{
+    grid-column: 1 / span 4;
+    margin-bottom: 3rem;
+    padding: 1.4rem;
+    border-radius: 2rem;
+
+
+}
+.output {
+    height: 2.5rem;
+    display: grid;
+    text-align: right;
+    font-size: 2rem;
+}
+.output div:last-child{
+    grid-column:4 / span 3 ;
+    overflow: hidden;
+}
+.output div:first-child{
+    text-align: left;
+}
+.btn{
+    cursor:pointer;
+}
+.btn:active{
+    transform : scale(0.92);
+    transition: transform 100ms ease;
+}
+@media only screen and (max-width:400px) {
+    body{
+        font-size: 10px;
+    }
+    .outer{
+        max-width: 70%;
+
+    }
+    
+}
